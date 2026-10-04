@@ -1,0 +1,45 @@
+{
+  "name": "qr-code-generator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A production-ready, installable QR Code Generator built with React + Vite.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "lint": "eslint .",
+    "cap:add:android": "npx cap add android",
+    "cap:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:build:debug": "npm run cap:sync && cd android && ./gradlew assembleDebug",
+    "android:build:release": "npm run cap:sync && cd android && ./gradlew assembleRelease",
+    "android:build:debug:win": "npm run cap:sync && cd android && gradlew.bat assembleDebug",
+    "android:build:release:win": "npm run cap:sync && cd android && gradlew.bat assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor-community/media": "^6.0.0",
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/clipboard": "^6.0.1",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/filesystem": "^6.0.1",
+    "@capacitor/share": "^6.0.2",
+    "jsqr": "^1.4.0",
+    "lucide-react": "^0.446.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "vite": "^5.4.8",
+    "vite-plugin-pwa": "^0.20.5"
+  }
+}

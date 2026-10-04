@@ -1,0 +1,33 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# OS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# PWA generated files (created at build time)
+dev-dist
+
+# Android native project (created by `npx cap add android`)
+# Keep the android/ folder itself in version control (Capacitor's own guidance),
+# but ignore its generated build output and local machine config.
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+android/*.iml
+android/.idea
+*.keystore
+*.jks
